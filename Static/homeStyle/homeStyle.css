@@ -1,0 +1,8 @@
+.container-fluid{
+    padding: 0.7%;
+    background-color:maroon;
+}
+body{
+    background-image:url('p6.png');
+    background-size: auto;
+}
