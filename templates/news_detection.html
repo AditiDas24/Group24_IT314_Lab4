@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake News Detector - Detect News</title>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="detect_page.css">
+</head>
+<body>
+  <header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Fake News Detector</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item logout-icon">
+                <a class="nav-link" href="home_page.html">
+                  <span class="text">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+  </header>
+
+  <main>
+    <section class="detect">
+      <div class="container">
+        <h2>Detect News</h2>
+        <form action="result.html">
+          <div class="form-group">
+            <label for="input-method">Input Method</label>
+            <select class="form-control" id="input-method" name="input-method">
+              <option value="text">Text</option>
+              <option value="url">URL</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="input-data">Input Data</label>
+            <textarea class="form-control" id="input-data" name="input-data" rows="5" placeholder="Enter text or URL"></textarea>
+          </div>
+          <div class="form-group" id="newsletter-options">
+            <label for="select-newsletter">Newsletter</label>
+            <select class="form-control" id="select-newsletter" name="select-newsletter">
+              <option value="">Select Newsletter</option>
+              <option value="TimesofIndia">Times Of India</option>
+              <option value="TheHindu">The Hindu</option>
+              <option value="TheGuardian">The Guardian</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Detect</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
+  <script src = "../static/Signup.js" ></script>
+  <script>
+    $(document).ready(function() {
+      // Hide newsletter options by default
+      $('#newsletter-options').hide();
+      
+      // Show/hide newsletter options based on input method selected
+      $('#input-method').on('change', function() {
+        var method = $(this).val();
+        if (method === 'url') {
+          $('#newsletter-options').show();
+        } else {
+          $('#newsletter-options').hide();
+        }
+      });
+    });
+  </script>
+  <script src="../static/news_detection.js"></script>
+</body>
+</html>
