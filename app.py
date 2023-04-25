@@ -1,5 +1,29 @@
+from flask import Flask, render_template, request
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import PassiveAggressiveClassifier
+import pickle
+import pandas as pd
+from sklearn.model_selection import train_test_split
 import pyrebase
-from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
+from Scraper.Scraper import *
+
+
+tfvect = TfidfVectorizer(stop_words='english', max_df=0.7)
+loaded_model = pickle.load(open('model.pkl', 'rb'))
+dataframe = pd.read_csv('news.csv')
+x = dataframe['text']
+y = dataframe['label']
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
+
+def fake_news_det(news):
+    tfid_x_train = tfvect.fit_transform(x_train)
+    tfid_x_test = tfvect.transform(x_test)
+    input_data = [news]
+    vectorized_input_data = tfvect.transform(input_data)
+    prediction = loaded_model.predict(vectorized_input_data)
+    return prediction
+
+
 
 app = Flask(__name__)       #Initialze flask constructor
 
@@ -15,6 +39,8 @@ config = {
    "databaseURL" : ""
 }
 
+
+
 #initialize firebase
 firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
@@ -23,10 +49,31 @@ db = firebase.database()
 #Initialze person as dictionary
 person = {"is_logged_in": False, "name": "", "email": "", "uid": ""}
 
+
 #Login
 @app.route("/")
 def login():
-    return render_template("home_page.html")
+    return render_template("news_detection.html")
+
+@app.route("/result",methods = ["POST"])
+def result():
+    inputm = request.form['input-method']
+    inputd = request.form['input-data']
+    try:
+        newsl = request.form['select-newsletter']
+        if newsl == 'TimesofIndia':
+            data = timesOfIndiaScraper(inputd)
+        elif newsl == 'TheHindu':
+            data = theHinduscraper(inputd)
+        elif newsl == 'TheGuardian':
+            data = theguardianscraper(inputd)
+        else:
+            return render_template("result.html", result = "Error")
+        return render_template("result.html", result = fake_news_det(data))    
+    except:
+        newsl = 0
+        return render_template("result.html", result = fake_news_det(inputd))
+
 
 # #Sign up/ Register
 # @app.route("/signup")
@@ -91,4 +138,4 @@ def login():
 #             return redirect(url_for('register'))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)
