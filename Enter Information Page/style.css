@@ -16,10 +16,14 @@ body{
  background-repeat: no-repeat;
   background-size: cover;
 
+    background-color: #112D4E ;
+  
+
 }
 
 .box {
   width: 100%;
+  
 }
 
 .text-box{
@@ -32,6 +36,7 @@ body{
   padding: 0 20px 20px 20px;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgb(1 1 1 / 10%);
+  
 }
 
 .text-box .top-area{
@@ -72,7 +77,7 @@ body{
   resize: none;
   border-radius: 5px;
   border: 1px solid #009FEF;
-  color: white;
+  color: #112D4E;
 }
 
 textarea::placeholder {
@@ -92,8 +97,8 @@ textarea::placeholder {
 
 .link-box {
   margin-top: 10px;
- float: right;
-  width: 50%;
+ float: left;
+  width: 100%;
 }
 
 .link-box input {
@@ -125,8 +130,3 @@ select:focus {
   border-color: #009FEF;
   box-shadow: 0 0 0 3px rgba(0, 159, 239, 0.2);
 }
-
-
-
-
-
