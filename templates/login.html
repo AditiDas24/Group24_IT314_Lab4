@@ -29,9 +29,11 @@
         <input type="submit" class="fadeIn fourth" value="Log In">
       </form>
 
+      <button onclick="location.href='home'" style="position: fixed; top: 20px; left: 20px;">Back</button>
+
       <div>
         {% if us %}
-        <p>User not registered</p>
+        <p class="unsuccess">User not registered</p>
         {% endif %}
       </div>
       <!-- 

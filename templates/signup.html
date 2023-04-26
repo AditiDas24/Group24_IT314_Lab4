@@ -28,8 +28,18 @@
           maxlength="30" placeholder="Email">
         <input type="password" id="password" class="fadeIn third" name="pass" minlength="6" maxlength="25"
           placeholder="Password">
+        <input type="password" id="confirmpassword" class="fadeIn third" name="confirmpass" minlength="6" maxlength="25"
+          placeholder="Confirm Password">
         <input type="submit" class="fadeIn fourth" value="Sign Up">
       </form>
+
+      <button onclick="location.href='home'" style="position: fixed; top: 20px; left: 20px;">Back</button>
+
+      <div>
+        {% if us %}
+        <p class="unsuccess">Password Mismatch</p>
+        {% endif %}
+      </div>
 
     </div>
   </div>

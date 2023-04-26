@@ -9,6 +9,7 @@ from flask import (
     abort,
     url_for,
 )
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import PassiveAggressiveClassifier
 import pickle
@@ -145,8 +146,12 @@ def register():
         result = request.form  # Get the data submitted
         email = result["email"]
         password = result["pass"]
+        confirmpass = result["confirmpass"]
         name = result["name"]
         try:
+            if password != confirmpass:
+                # If passwords do not match
+                return render_template("signup.html", us="Passwords do not match")
             # Try creating the user account using the provided data
             auth.create_user_with_email_and_password(email, password)
             # Login the user
