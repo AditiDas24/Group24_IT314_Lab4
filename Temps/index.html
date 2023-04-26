@@ -1,110 +1,54 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Fake News Detection Survey</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form>
+		<h1>Fake News Detection Survey</h1>
+		<label for="name">Name</label>
+		<input type="text" id="name" name="name" required>
 
+		<label for="email">Email</label>
+		<input type="text" id="email" name="email" required>
 
-  <head>
-    <meta charset="UTF-8" />
-    <title>FakeRanks Faux Real</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href = "../Static/style.css">
-  </head>
+		<label for="age">Age</label>
+		<select id="age" name="age">
+			<option value="">Select your age group</option>
+			<option value="18-24">18-24</option>
+			<option value="25-34">25-34</option>
+			<option value="35-44">35-44</option>
+			<option value="45-54">45-54</option>
+			<option value="55-64">55-64</option>
+			<option value="65+">65+</option>
+		</select>
 
+		<label for="gender">Gender</label>
+		<select id="gender" name="gender">
+			<option value="">Select your gender</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
 
+		<label for="news-source">Where do you usually get your news from?</label>
+		<input type="text" id="news-source" name="news-source" required>
 
-  <body>
-    <div class = "header">
-      <h1>FakeRanks Faux Real</h1>
-      <h2>News Classifier</h2>
-    </div>
+		<label for="news-frequency">How often do you consume news?</label>
+		<select id="news-frequency" name="news-frequency">
+			<option value="">Select frequency</option>
+			<option value="daily">Daily</option>
+			<option value="weekly">Weekly</option>
+			<option value="monthly">Monthly</option>
+			<option value="occasionally">Occasionally</option>
+			<option value="never">Never</option>
+		</select>
 
+		<label for="news-verification">How do you verify the news you read?</label>
+		<textarea id="news-verification" name="news-verification" required></textarea>
 
-    <div class = "login-btn">
-
-      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-      <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Signup</button>
-
-
-      <div id="id01" class="modal">
-        
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-          </div>
-
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
-            <button type="submit">Login</button>
-            
-          </div>
-
-          <div class="container">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            
-          </div>
-        </form>
-      </div>
-
-
-      <div id="id02" class="modal">
-        
-        <form class="modal-content animate" action="/action_page.php" method="post">
-
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-          </div>
-
-
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
-            <button type="submit">Signup</button>
-            
-          </div>
-
-          <div class="container">
-            
-            
-
-            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-            
-
-          </div>
-        </form>
-      </div>
-
-
-  </div>
-
-  <script>
-  var modal = document.getElementById('id01');
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
-
-  var modal2 = document.getElementById('id02');
-  window.onclick = function(event) {
-      if (event.target == modal2) {
-          modal2.style.display = "none";
-      }
-  }
-
-
-  </script>
-
-
-
-  </body>
+		<input type="submit" value="Submit">
+	</form>
+</body>
 </html>
