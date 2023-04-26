@@ -36,7 +36,7 @@ def fake_news_det(news):
     return prediction
 
 
-app = Flask(__name__)  # Initialze flask constructor
+app = Flask(_name_)  # Initialze flask constructor
 
 # Add your own details
 config = {
@@ -178,5 +178,5 @@ def register():
             return redirect(url_for("register"))
 
 
-if __name__ == "__main__":
-    app.run(port=2000)
+if _name_ == "_main_":
+    app.run(debug = True)

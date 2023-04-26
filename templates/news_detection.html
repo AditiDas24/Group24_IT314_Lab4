@@ -7,7 +7,8 @@
   <title>Fake News Detector - Detect News</title>
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="detect_page.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'news_detection.css') }}">
+  <!-- <link rel=""stylesheet" href="../static/news_detection.css"> -->
 </head>
 
 <body>
@@ -47,7 +48,7 @@
     <section class="detect">
       <div class="container">
         <h2>Detect News</h2>
-        <form action="result.html">
+        <form method = "POST" action = "{{url_for('result') }}">
           <div class="form-group">
             <label for="input-method">Input Method</label>
             <select class="form-control" id="input-method" name="input-method">

@@ -25,7 +25,7 @@ def timesOfIndiaScraper(url):
     html_text = requests.get(url)
     soup = BeautifulSoup(html_text.text, 'lxml')
     main_text = soup.find('div',class_ = "_s30J clearfix").text
-    processed_text = process_text(main_text)
+    processed_text = main_text
     return processed_text
 
 
@@ -33,8 +33,7 @@ def theHinduscraper(url):
     html_text = requests.get(url)
     soup = BeautifulSoup(html_text.text, 'lxml')
     main_text = soup.find('div',class_ = "col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12 storyline").text
-    processed_text = process_text(main_text)
-    print(processed_text)
+    processed_text = main_text
     return processed_text
 
 
@@ -42,16 +41,15 @@ def newyorktimesScraper(url):
     html_text = requests.get(url)
     soup = BeautifulSoup(html_text.text, 'lxml')
     main_text = soup.find('div',class_ = "css-1ygdjhk evys1bk0").text
-    processed_text = process_text(main_text)
-    return processed_text
+    # processed_text = process_text(main_text)
+    return main_text
 
 
 def theguardianscraper(url):
     html_text = requests.get(url)
     soup = BeautifulSoup(html_text.text, 'lxml')
     main_text = soup.find('div',class_ = "dcr-ch7w1w").text
-    processed_text = process_text(main_text)
-    print(processed_text)
-    return processed_text
+    
+    return main_text
 
 theguardianscraper(url)
