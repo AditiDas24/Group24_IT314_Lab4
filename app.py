@@ -120,7 +120,7 @@ def result():
         elif newsl == "TheGuardian":
             data = theguardianscraper(inputd)
         else:
-            return render_template("result.html", result="Error")
+            return render_template("result.html", result=fake_news_det(inputd))
         return render_template("result.html", result=fake_news_det(data))
     except:
         newsl = 0
@@ -187,4 +187,4 @@ def register():
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(port=2000, debug=True)
