@@ -55,14 +55,14 @@
         <h2>Detect News</h2>
         <form method = "POST" action = "{{url_for('result') }}">
           <div class="form-group">
-            <label for="input-method">Input Method</label>
+            <label for="input-method" class="my-2">Input Method</label>
             <select class="form-control" id="input-method" name="input-method">
               <option value="text">Text</option>
               <option value="url">URL</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="input-data">Input Data</label>
+            <label for="input-data" class="my-2">Input Data</label>
             <textarea class="form-control" id="input-data" name="input-data" rows="5"
               placeholder="Enter text or URL"></textarea>
           </div>
@@ -75,7 +75,9 @@
               <option value="TheGuardian">The Guardian</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary">Detect</button>
+          <div class="text-center">
+            <button type="submit" class="btn btn-outline-primary my-2">Detect</button>
+          </div>
         </form>
       </div>
     </section>

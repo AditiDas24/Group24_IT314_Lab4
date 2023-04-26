@@ -49,3 +49,13 @@ transition: color 0.3s ease-in-out;
 .social-icons a:hover {
 color: #212529;
 }
+
+.navbar-custom {
+    background-color: #DBE2EF;
+    /* background-color: red; */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color:#3F72AF;
+}

@@ -2,42 +2,163 @@
 <html>
 <head>
 	<title>FAQs | Fake News Detection</title>
-	<link rel="stylesheet" href="faq.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="faq.css"> -->
+  <link rel="stylesheet" href="../Static/faq.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-	<h1>Frequently Asked Questions</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom contain">
+    <div class="container ">
+      <a class="navbar-brand" href="#">Fake News Detector</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_us">Contact</a>
+          </li>
+          <li class="nav-item logout-icon">
+            <a class="nav-link" href="home">
+              <span class="text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-	<h2>What is fake news?</h2>
-	<p>Fake news is a type of false information deliberately spread through traditional or social media platforms with the intention to deceive people. It can be in the form of a hoax, satire, propaganda, or misleading content.</p>
+  
+	<h3>Frequently Asked Questions</h3>
 
-	<h2>How can I detect fake news?</h2>
-	<p>There are several ways to detect fake news, such as:</p>
+	<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          What is fake news?
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+	  	Fake news is a type of false information deliberately spread through traditional or social media platforms with the intention to deceive people. It can be in the form of a hoax, satire, propaganda, or misleading content.
+      </div>
+
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          How can I detect fake news?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+There are several ways to detect fake news, such as:
 	<ul>
 		<li>Check the source and credibility of the website or article</li>
 		<li>Verify the information with other reputable sources</li>
 		<li>Look for any biases or agendas behind the news</li>
 		<li>Watch out for sensational or clickbait headlines</li>
-	</ul>
+	</ul>      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What is your fake news detection tool?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+	Our fake news detection tool is a machine learning model that analyzes news articles and provides a probability score indicating the likelihood of the news being fake or genuine. The model uses various features such as language, source, content, and context to make its prediction.
+      </div>
+    </div>
+  </div>
 
-	<h2>What is your fake news detection tool?</h2>
-	<p>Our fake news detection tool is a machine learning model that analyzes news articles and provides a probability score indicating the likelihood of the news being fake or genuine. The model uses various features such as language, source, content, and context to make its prediction.</p>
-
-	<h2>How accurate is your fake news detection tool?</h2>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          How accurate is your fake news detection tool?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
 	<p>Our fake news detection tool has an accuracy of around 95%, which means it can correctly identify fake news with a high degree of confidence. However, it is not perfect, and there may be cases where it fails to identify fake news or labels genuine news as fake.</p>
 
-	<h2>Can I use your fake news detection tool for free?</h2>
-	<p>Yes, our fake news detection tool is available for free for personal and non-commercial use. However, if you want to use it for commercial purposes, you need to contact us for licensing and pricing details.</p>
+      </div>
+    </div>
+  </div>
 
-	<h2>How can I report fake news to you?</h2>
-	<p>If you come across any fake news or misinformation, you can report it to us by sending an email to report@fakenewsdetection.com. Please provide the link to the article and any other relevant information to help us verify the information.</p>
+  <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Can I use your fake news detection tool for free?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+	Yes, our fake news detection tool is available for free for personal and non-commercial use. However, if you want to use it for commercial purposes, you need to contact us for licensing and pricing details.
 
-	<h2>Do you have any tips to avoid spreading fake news?</h2>
-	<p>Yes, here are some tips to avoid spreading fake news:</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          How can I report fake news to you?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+      <div class="card-body">
+	If you come across any fake news or misinformation, you can report it to us by sending an email to report@fakenewsdetection.com. Please provide the link to the article and any other relevant information to help us verify the information.
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingSeven">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Do you have any tips to avoid spreading fake news?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+      <div class="card-body">
+		Yes, here are some tips to avoid spreading fake news:
 	<ul>
 		<li>Verify the information before sharing it with others</li>
 		<li>Avoid sharing news from unreliable sources</li>
 		<li>Check the date and time of the news to ensure it is recent and relevant</li>
 		<li>Think before you share and consider the impact it may have on others</li>
 	</ul>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
