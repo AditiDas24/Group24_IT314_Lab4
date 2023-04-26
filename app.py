@@ -36,7 +36,7 @@ def fake_news_det(news):
     return prediction
 
 
-app = Flask(_name_)  # Initialze flask constructor
+app = Flask(__name__)  # Initialze flask constructor
 
 # Add your own details
 config = {
@@ -82,6 +82,10 @@ def login():
 def signup():
     return render_template("signup.html")
 
+
+@app.route("/contact_us")
+def contact():
+    return render_template("contact_us.html")
 
 # Welcome page
 @app.route("/welcome")
@@ -133,7 +137,11 @@ def resultlogin():
         password = request.form["pass"]
         try:
             auth.sign_in_with_email_and_password(email, password)
-            return render_template("news_detection.html", s=successsful)
+            global person
+            person["is_logged_in"] = True
+            # return render_template("news_detection.html", s=successsful)
+            return redirect(url_for("news_detection"))
+
         except:
             return render_template("login.html", us=unsuccessful)
     return render_template("login.html")
@@ -178,5 +186,5 @@ def register():
             return redirect(url_for("register"))
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug = True)
