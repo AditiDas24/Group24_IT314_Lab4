@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +9,38 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="detect_page.css">
 </head>
+
 <body>
   <header>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="#">Fake News Detector</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <li class="nav-item logout-icon">
-                <a class="nav-link" href="home_page.html">
-                  <span class="text">Logout</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+      <div class="container">
+        <a class="navbar-brand" href="#">Fake News Detector</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item logout-icon">
+              <a class="nav-link" href="home">
+                <span class="text">Logout</span>
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      
+      </div>
+    </nav>
+
   </header>
 
   <main>
@@ -54,7 +57,8 @@
           </div>
           <div class="form-group">
             <label for="input-data">Input Data</label>
-            <textarea class="form-control" id="input-data" name="input-data" rows="5" placeholder="Enter text or URL"></textarea>
+            <textarea class="form-control" id="input-data" name="input-data" rows="5"
+              placeholder="Enter text or URL"></textarea>
           </div>
           <div class="form-group" id="newsletter-options">
             <label for="select-newsletter">Newsletter</label>
@@ -71,19 +75,18 @@
     </section>
   </main>
 
-  
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
-  <script src = "../static/Signup.js" ></script>
+  <script src="../static/Signup.js"></script>
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       // Hide newsletter options by default
       $('#newsletter-options').hide();
-      
+
       // Show/hide newsletter options based on input method selected
-      $('#input-method').on('change', function() {
+      $('#input-method').on('change', function () {
         var method = $(this).val();
         if (method === 'url') {
           $('#newsletter-options').show();
@@ -95,4 +98,5 @@
   </script>
   <script src="../static/news_detection.js"></script>
 </body>
+
 </html>
