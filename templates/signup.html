@@ -4,10 +4,13 @@
 <head>
   <title>Sign Up</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+  <!-- <link rel="stylesheet" href="../Static/main.css"> -->
+
 </head>
 
-<body>
-  <div class="wrapper fadeInDown">
+<body >
+  <div class="img"></div>
+  <div class="wrapper fadeInDown fImg">
     <div id="formContent">
       <!-- Tabs Titles -->
       <a href="login">
@@ -18,6 +21,8 @@
       <!-- Icon -->
       <div class="fadeIn first">
         <img src="{{ url_for('static', filename = 'user.png') }}" id="icon" alt="User Icon" />
+        <!-- <img src="../Static/user.png" id="icon" alt="User Icon" /> -->
+
       </div>
 
       <!-- Login Form -->
