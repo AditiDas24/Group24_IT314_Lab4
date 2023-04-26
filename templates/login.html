@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+</head>
+
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Sign In </h2>
+      <a href="signup">
+        <h2 class="inactive underlineHover">Sign Up </h2>
+      </a>
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="{{ url_for('static', filename = 'user.png') }}" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form action="resultlogin" method="POST">
+        <input type="email" id="login" class="fadeIn second" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.com"
+          minlength="8" maxlength="30" placeholder="Email" title="Enter email (___@---.com) in this formate">
+        <input type="password" id="password" class="fadeIn third" name="pass" minlength="6" maxlength="25"
+          placeholder="Password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+
+      <button onclick="location.href='home'" style="position: fixed; top: 20px; left: 20px;">Back</button>
+
+      <div>
+        {% if us %}
+        <p class="unsuccess">User not registered</p>
+        {% endif %}
+      </div>
+      <!-- 
+	Will add in future
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+ -->
+    </div>
+  </div>
+</body>
+
+</html>
