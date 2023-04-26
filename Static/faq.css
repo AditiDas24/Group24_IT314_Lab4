@@ -76,6 +76,8 @@ a:hover {
 
 .navbar-custom {
     background-color: #DBE2EF;
+	margin: 0;
+	padding: 0;
 }
 
 .navbar-custom .navbar-brand,
@@ -83,8 +85,3 @@ a:hover {
     color:#3F72AF;
 }
 
-.contain{
-	margin : 0px;
-	/* padding: 10px; */
-	/* padding :  ; */
-}

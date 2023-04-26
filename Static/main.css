@@ -368,3 +368,37 @@ html {
   min-width: 50%;
   min-height: 50%;
 } */
+
+.back-btn {
+  margin: 10px;
+  position: fixed; 
+  top: 20px; 
+  left: 20px; 
+  background-color: #3F72AF;
+  font-size: 20px;
+  width: 8%;
+  height: 6%;
+  padding: 0.2%;
+  background: #0055ff;
+  background-color: #39ace7;
+  color: #fff;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: 0.5s;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-color: #2196F3;
+  /* background: transparent; */
+  color: dodgerblue;
+}
+.back-btn:hover {
+  background: #0055dd;
+  color: #fff;
+  transition: 0.5s;
+}
+.back-btn:focus {
+  box-shadow: 0 0 0 5px rgba(0, 85, 255, 0.5)
+}

@@ -12,17 +12,17 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
   
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'news_detection.css') }}">
-  <!-- <link rel=""stylesheet" href="../static/news_detection.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'news_detection.css') }}"> -->
+  <!-- <link rel="stylesheet" href="../static/news_detection.css"> -->
 </head>
 
 <body>
   <header>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
       <div class="container">
-        <a class="navbar-brand" href="#">Fake News Detector</a>
+        <a class="navbar-brand" href="#" style="color : #3F72AF;">Fake News Detector</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -67,7 +67,7 @@
               placeholder="Enter text or URL"></textarea>
           </div>
           <div class="form-group" id="newsletter-options">
-            <label for="select-newsletter">Newsletter</label>
+            <label for="select-newsletter" class="my-2">Newsletter</label>
             <select class="form-control" id="select-newsletter" name="select-newsletter">
               <option value="">Select Newsletter</option>
               <option value="TimesofIndia">Times Of India</option>
