@@ -2,6 +2,13 @@
 
 /* BASIC */
 
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   background-color: #DBE2EF;
 }
@@ -9,6 +16,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  width : 100vh;
 }
 
 a {
@@ -43,7 +51,8 @@ h2 {
   justify-content: center;
   width: 100%;
   min-height: 100%;
-  padding: 20px;
+  /* padding: 20px; */
+  padding : 5px;
 }
 
 #formContent {
@@ -310,4 +319,86 @@ input[type=text]:placeholder {
 
 * {
   box-sizing: border-box;
+}
+
+.img{
+  background-image: url('../Static/Images/image.jpg');
+  /* #example1 { */
+    /* background: url(mountain.jpg); */
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    z-index: -1;
+    margin-top: -10px;
+    /* margin-left: -10px; */
+    /* margin: auto; */
+} 
+
+/* 
+html {
+  background: url('../Static/Images/image.jpg') no-repeat center center fixed;
+  -webkit-background-size : cover;
+  -moz-background-size : cover;
+  -o-background-size : cover;
+  background-size: cover;
+} */
+
+.fImg{
+  position: absolute;
+  margin-top: 0;
+}
+
+/* .bg{
+  position: fixed;
+  top : -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+.bg img {
+  position: absolute;
+  top : 0;
+  left : 0 ;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+} */
+
+.back-btn {
+  margin: 10px;
+  position: fixed; 
+  top: 20px; 
+  left: 20px; 
+  background-color: #3F72AF;
+  font-size: 20px;
+  width: 8%;
+  height: 6%;
+  padding: 0.2%;
+  background: #0055ff;
+  background-color: #39ace7;
+  color: #fff;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: 0.5s;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-color: #2196F3;
+  /* background: transparent; */
+  color: dodgerblue;
+}
+.back-btn:hover {
+  background: #0055dd;
+  color: #fff;
+  transition: 0.5s;
+}
+.back-btn:focus {
+  box-shadow: 0 0 0 5px rgba(0, 85, 255, 0.5)
 }
