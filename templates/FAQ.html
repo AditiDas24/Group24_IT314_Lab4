@@ -2,42 +2,166 @@
 <html>
 <head>
 	<title>FAQs | Fake News Detection</title>
-	<link rel="stylesheet" href="faq.css">
+	<link rel="stylesheet" href="../Static/faq.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+  
 </head>
 <body>
-	<h1>Frequently Asked Questions</h1>
+  <header>
 
-	<h2>What is fake news?</h2>
-	<p>Fake news is a type of false information deliberately spread through traditional or social media platforms with the intention to deceive people. It can be in the form of a hoax, satire, propaganda, or misleading content.</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container contain">
+        <a class="navbar-brand" href="#" style="color : #3F72AF;">Fake News Detector</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact_us">Contact</a>
+            </li>
+            <li class="nav-item logout-icon">
+              <a class="nav-link" href="home">
+                <span class="text">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-	<h2>How can I detect fake news?</h2>
-	<p>There are several ways to detect fake news, such as:</p>
+    </nav>
+
+  </header> 
+  <div class="qna">
+
+	<h3 style="padding-left: 2rem;">Frequently Asked Questions</h3>
+
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        What is fake news?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+	  	Fake news is a type of false information deliberately spread through traditional or social media platforms with the intention to deceive people. It can be in the form of a hoax, satire, propaganda, or misleading content.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        How can I detect fake news?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        There are several ways to detect fake news, such as:
 	<ul>
 		<li>Check the source and credibility of the website or article</li>
 		<li>Verify the information with other reputable sources</li>
 		<li>Look for any biases or agendas behind the news</li>
 		<li>Watch out for sensational or clickbait headlines</li>
 	</ul>
+      </div>
+    </div>
+  </div>
 
-	<h2>What is your fake news detection tool?</h2>
-	<p>Our fake news detection tool is a machine learning model that analyzes news articles and provides a probability score indicating the likelihood of the news being fake or genuine. The model uses various features such as language, source, content, and context to make its prediction.</p>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        What is your fake news detection tool?
+        
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+	Our fake news detection tool is a machine learning model that analyzes news articles and provides a probability score indicating the likelihood of the news being fake or genuine. The model uses various features such as language, source, content, and context to make its prediction.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingFour">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      How accurate is your fake news detection tool?
+      
+      
+    </button>
+  </h2>
+  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+	Our fake news detection tool has an accuracy of around 95%, which means it can correctly identify fake news with a high degree of confidence. However, it is not perfect, and there may be cases where it fails to identify fake news or labels genuine news as fake.
 
-	<h2>How accurate is your fake news detection tool?</h2>
-	<p>Our fake news detection tool has an accuracy of around 95%, which means it can correctly identify fake news with a high degree of confidence. However, it is not perfect, and there may be cases where it fails to identify fake news or labels genuine news as fake.</p>
+    </div>
+  </div>
+</div>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingFive">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+      Can I use your fake news detection tool for free?
+      
+    </button>
+  </h2>
+  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+	Yes, our fake news detection tool is available for free for personal and non-commercial use. However, if you want to use it for commercial purposes, you need to contact us for licensing and pricing details.
+    </div>
+  </div>
+</div>
+</div>
 
-	<h2>Can I use your fake news detection tool for free?</h2>
-	<p>Yes, our fake news detection tool is available for free for personal and non-commercial use. However, if you want to use it for commercial purposes, you need to contact us for licensing and pricing details.</p>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingSix">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+      How can I report fake news to you?
 
-	<h2>How can I report fake news to you?</h2>
-	<p>If you come across any fake news or misinformation, you can report it to us by sending an email to report@fakenewsdetection.com. Please provide the link to the article and any other relevant information to help us verify the information.</p>
+      
+    </button>
+  </h2>
+  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+	If you come across any fake news or misinformation, you can report it to us by sending an email to report@fakenewsdetection.com. Please provide the link to the article and any other relevant information to help us verify the information.
+    </div>
+  </div>
+</div>
+</div>
 
-	<h2>Do you have any tips to avoid spreading fake news?</h2>
-	<p>Yes, here are some tips to avoid spreading fake news:</p>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingSeven">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+      Do you have any tips to avoid spreading fake news?
+
+      
+    </button>
+  </h2>
+  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      Yes, here are some tips to avoid spreading fake news:
 	<ul>
 		<li>Verify the information before sharing it with others</li>
 		<li>Avoid sharing news from unreliable sources</li>
 		<li>Check the date and time of the news to ensure it is recent and relevant</li>
 		<li>Think before you share and consider the impact it may have on others</li>
 	</ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
 </body>
 </html>
