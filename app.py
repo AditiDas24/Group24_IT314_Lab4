@@ -87,6 +87,10 @@ def signup():
 def contact():
     return render_template("contact_us.html")
 
+@app.route("/about_us")
+def about():
+    return render_template("about_us.html")
+
 # Welcome page
 @app.route("/welcome")
 def welcome():
