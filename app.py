@@ -131,6 +131,23 @@ def result():
         return render_template("result.html", result=fake_news_det(inputd))
 
 
+@app.route("/forgot_pass")
+def forgot_pass():
+    return render_template("forgot_password.html")
+
+
+@app.route("/forgot_password" , methods=["POST", "GET"])
+def forgot_password():
+    if request.method == "POST":
+        email = request.form['email']
+        try:
+            auth.send_password_reset_email(email)
+            return render_template('login.html')
+        except:
+            return render_template('forgot_password.html', us="Entered mail is not registered")
+    return render_template('forgot_password.html')
+
+
 # If someone clicks on login, they are redirected to /result
 @app.route("/resultlogin", methods=["POST", "GET"])
 def resultlogin():
