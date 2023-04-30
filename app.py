@@ -168,6 +168,16 @@ def resultlogin():
     return render_template("login.html")
 
 
+@app.route("/logout")
+def logout():
+    global person
+    person["is_logged_in"] = False
+    person["name"] = ""
+    person["email"] = ""
+    person["uid"] = ""
+    return redirect(url_for("home"))
+
+
 # If someone clicks on register, they are redirected to /register
 @app.route("/register", methods=["POST", "GET"])
 def register():
@@ -198,7 +208,7 @@ def register():
             return redirect(url_for("welcome"))
         except:
             # If there is any error, redirect to register
-            return redirect(url_for("register"))
+            return render_template('signup.html', us="Id Already Exists!")
 
     else:
         if person["is_logged_in"] == True:
